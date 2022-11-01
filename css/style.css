@@ -1,0 +1,828 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+:root {
+    --cor0: #28075E;
+    --cor1: #8F58E9;
+    --cor2: #0c0020;
+    --cor3: #C5F0FF;
+    --cor4: #90C6F3;
+    --cor5: white;
+    --cor6: #1B2E4F;
+    --cor7: #2C497F;
+    --cor8: black;
+
+    --border1: 10px;
+    --border2: 20px;
+
+    --font-geral:'Montserrat', sans-serif;
+}
+
+/*GLOBAL STYLES*/
+button{
+    border-radius: var(--border1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    border-radius: var(--border2);
+}
+li, span, a, h1, input, button, p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+li, span, a, h1, button, p{
+    color: var(--cor5);
+}
+body{
+    background-color: var(--cor2);
+    background-size: cover;
+}
+/*MENU DE NAVEGAÇÃO*/
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background: var(--cor0);
+    height: 8vh;
+}
+.menu-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#logo-header{
+    cursor: pointer;
+    height: 50px;
+    margin-right: auto;
+}
+#button-1{
+    margin-left: 20px;
+    width: 133px;
+    height: 45px;
+    background-color: var(--cor1);
+}
+@media screen and (max-width: 500px){
+    header{
+        flex-direction: column;
+        height: 20vh;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        border-radius: 0px 0px 30px 30px;
+    }
+    #logo-header{
+        height: 70px;
+        margin-right: 0;
+    }
+    #button-1{
+        width: 200px;
+    }
+    .menu-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        font-size: 13px;
+    }
+}
+
+/*MAIN GLOBAL*/
+
+/*INICIO LOGIN/CADASTRO*/
+.box_centro{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: var(--cor0);
+    border-radius: var(--border1);
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 3%;
+    text-align: center;
+}
+.text-login{
+    font-size: 35px;
+    font-weight: bold;
+}
+#verificado{
+    width: 150px;
+}
+.verif-text{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.login-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-main2{
+    cursor: pointer;
+    width: 80%;
+}
+.form input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--cor5);
+    border-radius: var(--border1);
+    color: white;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    transition: 0.5s;
+}
+
+.form {
+    position: relative;
+    width: 400px;
+    height: 3rem;
+}
+
+.form label{
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: white;
+    pointer-events: none;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: var(--cor0);
+}
+
+.form input:hover{
+    border: 2px solid var(--cor1);
+}
+.form input:focus,
+.form input:valid{
+    border: 2px solid var(--cor1);
+}
+.form input:focus ~ label,
+.form input:valid ~ label{
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    color: white;
+}
+
+
+#button-3{
+    background-color: var(--cor1);
+    width: 400px;
+    height: 40px;
+}
+@media screen and (max-width: 500px){
+.form {
+        position: relative;
+        width: 275px;
+        height: 3rem;
+        
+}
+#button-3{
+    width: 275px;
+}
+.box_centro{
+    width: 350px;
+}
+}
+
+/*FIM LOGIN/CADASTRO*/
+
+/* TAREFAS */
+
+.tarefas-table{
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 0.5rem;
+    width: 90vw;
+    height: 100%;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+    color: var(--cor5);
+}
+.tafi{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--cor2);
+    border-radius: var(--border1);
+    height: 100%;
+}
+.taf table tr{
+    padding-bottom: 10px;
+}
+
+.box-tarefas{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.comentario-tarefas input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--cor5);
+    border-radius: var(--border1);
+    color: white;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    transition: 0.5s;
+}
+
+.comentario-tarefas {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+.comentario-tarefas label{
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: white;
+    pointer-events: none;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: var(--cor2);
+}
+
+.comentario-tarefas input:hover{
+    border: 2px solid var(--cor1);
+}
+.comentario-tarefas input:focus,
+.comentario-tarefas input:valid{
+    border: 2px solid var(--cor1);
+}
+.comentario-tarefas input:focus ~ label,
+.comentario-tarefas input:valid ~ label{
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    color: white;
+}
+
+@media screen and (max-width: 500px){
+.comentario-tarefas {
+        position: relative;
+        height: 3rem;
+}
+}
+/* FIM TAREFAS*/
+
+/*MAIN INDEX*/
+main{
+    display: flex;
+    height: 86vh;
+    
+}
+@media screen and (max-width: 500px){
+    main{
+        height: 75vh;
+    }
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+#button-4{
+    width: 500px;
+    height: 60px;
+    background-color: var(--cor1);
+    font-size: 20px;
+}
+#logo-main{
+    width: 500px;
+}
+#texto{
+    color:var(--cor5);
+    font-size: 30px;
+}
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.left{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20vh;
+    margin-right: 10vh;
+    row-gap: 60px;
+}
+.right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    bottom: 0;
+}
+
+#landing{
+    width: 56.7vh;
+    height: auto;
+}
+
+@media screen and (max-width: 1400px){
+    .right{
+        display: none;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .left{
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    #texto{
+        text-align: center;
+    }
+    .logo-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 500px){
+    .right{
+        display: none;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .left{
+        align-items: center;
+        justify-content: center;
+        row-gap: 30px;
+    }
+    .logo-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #logo-main{
+        width: 260px;
+    }
+    #button-2{
+        width: 60vw;
+        height: 60px;
+        background-color: var(--cor1);
+        font-size: 20px;
+    }
+    #texto{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+/*INICIAL ALUNOS*/
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    background-color: transparent;
+}
+#perfil{
+    margin: 0 1rem;
+    height: 45px;
+}
+.user span {
+    color: var(--cor3);
+    font-family: var(--font-geral);
+}
+.title-alunos{
+    grid-area: div0;
+    display: flex;
+    align-items: center;
+}
+.title-alunos h1{
+    font-size: px;
+    color: var(--cor1);
+    font-weight: bolder;
+}
+.alunos-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 86vh;
+    padding: 2rem 3rem;
+}
+.alunos-main h1 {
+    font-size: 2rem;
+}
+.container-alunos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'div0 div0 div1 div1'
+    'div2 div2 div2 div2'
+    'div2 div2 div2 div2'
+    'div3 div3 div3 div3';
+    gap: 10px;
+}
+.tarefas-geral {
+    grid-area: div1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    height: 10vh;
+    color: var(--cor5);
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.tarefas-geral table tr td{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.crud-tarefas {
+    grid-area: div2;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--cor5);
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 90vw;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.crud-tarefas span {
+    color: var(--cor5);
+    font-size: 30px;
+    padding-left: 20px;
+}
+.taf{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--cor2);
+    border-radius: var(--border1);
+    padding: 15px;
+}
+.taf table tr{
+    padding-bottom: 10px;
+}
+
+/*INICIAL ALUNOS*/
+
+/*PROFESSORES*/
+#projetos{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.main_professores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    width: 100vw;
+}
+.div-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 80vw;
+    height: auto;
+    padding: 2rem;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.div-container section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 1rem;
+    border-radius: var(--border1);
+    background-color: var(--cor2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.div-container section:hover {
+    border-radius: var(--border2);
+}
+.div-container section span {
+    font-size: 1rem;
+}
+.div-progresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: auto;
+    gap: 0.5rem;
+}
+.div-progresso p {
+    font-size: 0.8rem;
+}
+.div-progresso div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3vh;
+    border-radius: var(--border1);
+    background-color: #10E89A;
+}
+.div-container button {
+    cursor: pointer;
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: var(--border1);
+    margin:0;
+    background-color: var(--cor1);
+}
+.div-container button:hover {
+    border-radius: var(--border2);
+}
+/*Desktop 5*/
+.div-tudo {
+    padding-top: 20px;
+    cursor: pointer;
+    display: grid;
+    grid-template-areas: 
+    'div1 div1 div2 div2'
+    'div3 div3 div2 div2'
+    'div3 div3 div2 div2'
+    'div3 div3 div4 div4';
+    gap: 1rem;
+}
+.div-main1 {
+    grid-area: div1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 40vw;
+    height: 9vh;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.div-main1 span {
+    color: var(--cor5);
+}
+
+.div-main2 {
+    grid-area: div2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 40vw;
+    height: 39vh;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.div-main2 span {
+    color: var(--cor5);
+}
+.div-main2 .div-tarefa {
+    width: 100%;
+    height: 11%;
+    background-color: var(--cor1);
+    border-radius: var(--border1);
+}
+.div-main1 .div-barra {
+    width: 95%;
+    height: 45%;
+    text-align: center;
+    font-size: 5px;
+    background-color: #5cf28e;
+}
+.div-barra{
+    border-radius: 10px;
+}
+.div-main3 {
+    grid-area: div3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 40vw;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.div-main3 span {
+    color: var(--cor5);
+}
+.div-main3 .div-tarefa {
+    width: 100%;
+    height: 11%;
+    background-color: var(--cor1);
+    border-radius: var(--border1);
+}
+.div-main4 {
+    grid-area: div4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 40vw;
+    height: 15vh;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+}
+.div-main4 input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 16px;
+    background-color: var(--cor1);
+    border: none;
+}
+.div-main4 input::placeholder {
+    color: var(--cor3);
+}
+/*Final desktop 5*/
+
+/*Desktop 6 - Tela de cadastro de projetos*/
+
+.inf-tudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor2);
+    row-gap: 20px;
+}
+
+.inf-main3 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 2rem 3rem 2rem 3rem;
+    gap: 1rem;
+    width: 80vw;
+    height: 60vh;
+    border-radius: var(--border1);
+    background-color: var(--cor0);
+    gap: 25px;
+}
+.inf-main3 h2 {
+    color: var(--cor5);
+    font-size: 24px;
+}
+
+.input-proj input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--cor5);
+    border-radius: var(--border1);
+    color: white;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    transition: 0.5s;
+}
+
+.input-proj {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+.input-proj label{
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: white;
+    pointer-events: none;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: var(--cor0);
+}
+
+.input-proj input:hover{
+    border: 2px solid var(--cor1);
+}
+.input-proj input:focus,
+.input-proj input:valid{
+    border: 2px solid var(--cor1);
+}
+.input-proj input:focus ~ label,
+.input-proj input:valid ~ label{
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    color: white;
+}
+
+
+#button-2{
+    background-color: var(--cor1);
+    width: 100%;
+    height: 40px;
+}
+@media screen and (max-width: 500px){
+.input-proj {
+        position: relative;
+        height: 3rem;
+}
+.inf-main3 {
+    padding: 1rem 2rem 1rem 2rem;
+}
+}
+
+/*Final desktop 6*/
+/*FOOTER*/
+footer{
+    height: 6vh;
+    background: var(--cor0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+#linha-vertical{
+    height: 34px;
+    border-right: 4px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    padding: 10px;
+}
+#logo-footer{
+    height: 30px;
+    cursor: pointer;
+}
+#credits{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px){
+   footer{
+    flex-direction: column;
+    row-gap: 20px;
+    height: 5vh;
+    border-radius: 30px 30px 0px 0px;
+   }
+   #linha-vertical{
+    display: none;
+   }
+   #logo-footer{
+    display: none;
+   }
+}
+
+/*INICIO SCROOLLBAR*/
+body::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  body::-webkit-scrollbar-track {
+    background: var(--cor0);
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--cor2);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+/*FIM SCROOLLBAR*/
